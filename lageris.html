@@ -1,0 +1,215 @@
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+	<title>Mini_Сайтик</title>
+	
+	<!-- Нормализация стилей -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+	
+	<!-- Собственные стили -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+	<!-- Подключаем веб шрифты -->
+	<link href="https://fonts.googleapis.com/css2?
+	family=Merriweather&family=PT+Sans+Caption:wght@400;700&display=swap" rel="stylesheet">
+	<link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+	rel="stylesheet">
+	
+     <!-- Подключаем jQuery -->
+    	<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=B-qK-0xo-KAFaerp6kq-2WHaSLqJLN_p9owOlt5H-l3skRi6CVyMXUFNQDuSERY9yTSS2DEUngyS0NW01x-1zNbGehtfa40ATUsdQ0lH0oF0_qdPxeyVzsYbk-lGleCXeZex5_t9fql9aj5CzpYDJg" charset="UTF-8"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    
+	<!-- Назначаем инконку -->
+	<link rel="shortcut icon" type="image/x-icon" href="img/16x16_cherep.png">
+	
+</head>
+<body>
+<header>
+	<div class="header__title">Шиндаков Всеволод</div>
+	<div class="header__slogan">
+    <b>
+     
+<form method="" name="osForm" action="" id="osForm">
+<p><b>Заявка на мойку</b></p>
+<p><label for="name">Имя</label>
+<input class="osForm_input" type="text" name="name" required><br>
+<label for="typets">Тип_транспорта</label>
+<select name="typets">
+<option selected disabled>Выберите тип тс</option>
+<option class="osForm_input" value="Легковой">Легковой</option>
+<option class="osForm_input" value="Грузовой">Грузовой</option>
+</select><br>
+<label for="usluga">Вид_услуги</label>
+<select name="usluga">
+<option selected disabled>Выберите услугу</option>
+<option class="osForm_input" value="Мойка">Мойка</option>
+<option class="osForm_input" value="Мойка+химчистка">Мойка+химчистка</option>
+</select><br> </p>
+<p> <button type="button" onclick='foo();'>Hello</button></p>
+
+<div id="hiddenhuita">
+<div class="wrapper">
+<div class="contacts_form">
+<div class="wrapper1">
+<div class="wrapper2">
+<label for="name">Рассчетная цена:</label><br>
+<input class="osForm_btn" type="submit" id="schet" value="calc">
+<div id="ajaxDivCalc"></div><br>
+<br>
+</div>
+<div class="wrapper2" style="display: none;">
+<label for="message">Выберите время <span>*</span></label><br>
+[[123]]
+<input class="osForm_input" type="text" name="vremya"><br>
+<input class="osForm_btn" type="submit" id="schet" value="save">
+<div id="ajaxDivSave"></div><br>
+</div>
+</div>
+</div>
+</div>
+</div>
+</form>
+
+        <!-- scripts -->
+<script type="text/javascript">
+
+$('#osForm input[value="calc"]').click(function(e){
+e.preventDefault();
+$.ajax({
+url: "schet.php",
+type: "POST",
+data: $('#osForm').serialize(),
+success: function(response) {
+console.log(response)
+$('#ajaxDivCalc').html(response);
+$('.contacts_form .wrapper2').show(300);
+},
+error: function(response) {
+alert('Ошибка расчёта стоимости');
+}
+});
+
+return false;
+})
+
+$('#osForm input[value="save"]').click(function(e){
+e.preventDefault();
+$.ajax({
+url: "123.php",
+type: "POST",
+data: $('#osForm').serialize(),
+success: function(response) {
+$('#ajaxDivSave').html(response);
+alert('Заявка успешно отправлена!');
+},
+error: function(response) {
+
+}
+});
+
+return false;
+})
+</script>
+
+<script>
+function foo() {
+document.getElementById("hiddenhuita").style.display = "block";
+}
+</script>
+    </b>
+</div>
+	<div class="header__strelka">
+		<i class="fab fa-accessible-icon"></i>
+	</div>
+		
+		
+	</div>
+</header>
+<div class="telo">
+	<div class="container">
+	
+	<div class="title">
+	Приколдесы
+	</div>
+	<div class="row">
+		<div class="col-4">
+			<div class="telo-item__img"">
+				<img src="img/me.png" width="360" height="300 alt="me">
+			</div>
+			<div class="telo-item__title">
+			<a href="#">123</a>
+			</div>
+			<div class="telo-text__title">
+			<p>123</p>
+			</div>
+		</div>
+		<div class="col-4">
+			<div class="telo-item__img">
+				<img src="img/tinker.jpg" width="360" height="300 alt="me">
+			</div>
+			<div class="telo-item__title">
+			<a href="#">123</a>
+			</div>
+			<div class="telo-text__title">
+			<p>123</p>
+			</div>
+		</div>
+		<div class="col-4">
+			<div class="telo-item__img">
+				<img src="img/Omniknight.png" width="360" height="300 alt="me">
+			</div>
+			<div class="telo-item__title">
+			<a href="#">123</a>
+			</div>
+			<div class="telo-text__title">
+			<p>123</p>
+			</div>
+		</div>
+		
+	</div>
+	
+	</div>
+</div>
+
+<!-- footer -->
+
+<div class="footer">
+	<div class="container">
+		<div class="row">
+		
+			<div class="col-4">
+				<p class="footer__name">Чисто гонщик</p>
+				<p>© Беспредельщик, гонщик, дотер, аскет, мизантроп.</p>
+			</div>
+			<div class="col-4">
+				<p class="footer__social">Мои профили в социальных сетях:</p>
+				<p class="footer__social-icons">
+					<a href="#" target="_blank">
+						<i class="fab fa-vk"></i>
+					</a>
+					<a href="#" target="_blank">
+						<i class="fab fa-twitter"></i>
+					</a>
+					<a href="#" target="_blank">
+						<i class="fab fa-facebook"></i>
+					</a>
+					<a href="#" target="_blank">
+						<i class="fab fa-instagram"></i>
+					</a>
+					<a href="#" target="_blank">
+						<i class="fab fa-youtube"></i>
+					</a>
+				</p>
+			</div>
+			<div class="col-4">
+			<div><a href="#" class="button" target="_blank">Связаться Вконтакте</a></div>
+				<p>Напишите мне, чтобы понять <br>насколько вы слабы</p>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+
+</body>
+</html>
